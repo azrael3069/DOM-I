@@ -47,62 +47,53 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
-// let nav = document.querySelector('nav')
+const navItems = document.getElementsByTagName("a");
+navItems[0].innerHTML = siteContent["nav"]["nav-item-1"];
+navItems[0].style.color = "darkorchid";
+navItems[1].innerHTML = siteContent["nav"]["nav-item-2"];
+navItems[1].style.color = "darkorchid";
+navItems[2].innerHTML = siteContent["nav"]["nav-item-3"];
+navItems[2].style.color = "darkorchid";
+navItems[3].innerHTML = siteContent["nav"]["nav-item-4"];
+navItems[3].style.color = "darkorchid";
+navItems[4].innerHTML = siteContent["nav"]["nav-item-5"];
+navItems[4].style.color = "darkorchid";
+navItems[5].innerHTML = siteContent["nav"]["nav-item-6"];
+navItems[5].style.color = "darkorchid";
 
-// let ctaH1 = document.querySelector('h1')
-// ctaH1.textContent = 'DOM Is Awesome';
+const mainHeading = document.querySelector("h1");
+mainHeading.innerHTML = siteContent["cta"]["h1"];
+const mainBtn = document.querySelector("Button");
+mainBtn.innerHTML = siteContent["cta"]["button"];
+const mainImg = document.getElementById("cta-img");
+mainImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
-let nav = document.querySelectorAll("a");
-nav[0].textContent = "Services";
-nav[0].style.color = "grey";
-nav[1].textContent = "Product";
-nav[1].style.color = "grey";
-nav[2].textContent = "Vision";
-nav[2].style.color = "grey";
-nav[3].textContent = "Features";
-nav[3].style.color = "grey";
-nav[4].textContent = "About";
-nav[4].style.color = "grey";
-nav[5].textContent = "Contact";
-nav[5].style.color = "grey";
-// let nav-item-1 = document.querySelector('nav-item-1')
-// this.nav-item-1.textContent = 'Services';
-// let nav-item-2 = document.querySelector('nav-item-2')
-// nav-item-2.textContent = 'Product';
-// let nav-item-3 = document.querySelector('nav-item-3')
-// nav-item-3.textContent = 'Vision';
-// let nav-item-4 = document.querySelector('nav-item-4')
-// nav-item-4.textContent = 'Features';
-// let nav-item-5 = document.querySelector('nav-item-5')
-// nav-item-5.textContent = 'About';
-// let nav-item-6 = document.querySelector('nav-item-6')
-// nav-item-6.textContent = 'Contact';
+const headings = document.getElementsByTagName("h4");
+headings[0].innerHTML = siteContent["main-content"]["features-h4"];
+headings[0].style.color = "darkorchid";
+headings[1].innerHTML = siteContent["main-content"]["about-h4"];
+headings[1].style.color = "darkorchid";
+headings[2].innerHTML = siteContent["main-content"]["services-h4"];
+headings[2].style.color = "darkorchid";
+headings[3].innerHTML = siteContent["main-content"]["product-h4"];
+headings[3].style.color = "darkorchid";
+headings[4].innerHTML = siteContent["main-content"]["vision-h4"];
+headings[4].style.color = "darkorchid";
+headings[5].innerHTML = siteContent["contact"]["contact-h4"];
+headings[5].style.color = "darkorchid";
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
-let ctaH1 = document.querySelector("h1");
-ctaH1.textContent = "DOM Is Awesome";
-
-const textContentNodes = document.querySelectorAll(".text-content");
-const sections = ["features", "about", "services", "product", "vision"];
-textContentNodes.forEach((element, index) => {
-  const section = sections[index];
-  element.getElementsByTagName("h4")[0].innerText =
-    siteContent["main-content"][`${section}-h4`];
-  element.getElementsByTagName("p")[0].innerText =
-    siteContent["main-content"][`${section}-content`];
-});
-
-document.querySelector(".contact h4").innerText = "Contact";
-const contactLines = document.querySelectorAll(".contact p");
-contactLines[0].innerHTML = siteContent["contact"]["address"].replace(
-  "et So",
-  "et<br />\n So"
-);
-contactLines[1].innerText = siteContent.contact.phone;
-contactLines[2].innerText = siteContent.contact.email;
-document.querySelector("footer p").innerText = siteContent.footer.copyright;
-
-//element.style.color = "green";
-//});
+const paragraphContent = document.getElementsByTagName("p");
+paragraphContent[0].innerHTML = siteContent["main-content"]["features-content"];
+paragraphContent[1].innerHTML = siteContent["main-content"]["about-content"];
+paragraphContent[2].innerHTML = siteContent["main-content"]["services-content"];
+paragraphContent[3].innerHTML = siteContent["main-content"]["product-content"];
+paragraphContent[4].innerHTML = siteContent["main-content"]["vision-content"];
+paragraphContent[5].innerHTML = siteContent["contact"]["address"];
+paragraphContent[6].innerHTML = siteContent["contact"]["phone"];
+paragraphContent[7].innerHTML = siteContent["contact"]["email"];
+paragraphContent[8].innerHTML = siteContent["footer"]["copyright"];
 
 //--------Stretch-----------------------------------------------------------------------
 const toggleButton = document.createElement("button");
